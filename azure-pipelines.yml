@@ -18,15 +18,8 @@ steps:
     npm run build
   displayName: 'npm install and build AzurePL'
 
-- task: CopyFiles@2
-  inputs:
-    Contents: 'dist/**'
-    TargetFolder: $(Build.ArtifactStagingDirectory)
-  displayName: 'Copying files from dist folder AzurePL'
-
 - task: PublishBuildArtifacts@1
   inputs:
-    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    PathtoPublish: 'build'
     ArtifactName: 'release'
     publishLocation: 'Container'
-  displayName: 'Publish artifact AzurePL'
