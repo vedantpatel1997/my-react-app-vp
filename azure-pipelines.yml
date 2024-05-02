@@ -17,12 +17,11 @@ steps:
     npm install
     npm run build
   displayName: 'npm install and build AzurePL'
-  workingDirectory: 'my-react-app-vp'
 
 - task: ArchiveFiles@2
   displayName: 'Compress build'
   inputs:
-    rootFolderOrFile: 'my-react-app-vp'
+    rootFolderOrFile: 'build'
     includeRootFolder: false
     archiveType: 'zip'
     archiveFile: '$(Build.ArtifactStagingDirectory)/dashboard.zip'
