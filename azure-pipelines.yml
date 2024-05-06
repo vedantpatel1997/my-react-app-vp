@@ -19,16 +19,16 @@ steps:
   displayName: 'npm install and build AzurePL'
 
 - task: ArchiveFiles@2
-  displayName: 'Compress build'
+  displayName: 'Compress build folder AzurePL'
   inputs:
     rootFolderOrFile: 'build'
     includeRootFolder: false
     archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/dashboard.zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/release.zip'
     replaceExistingArchive: true
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact'
+  displayName: 'Publish Artifact AzurePL'
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'drop'
