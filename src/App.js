@@ -9,7 +9,7 @@ function App() {
         
         <h1>React App Vedant Patel</h1>
         <p>Hosted through Azure Pipeline CICD</p>
-        <h1>Version 1.0</h1>
+        <h1>Version 2.0</h1>
       </header>
     </div>
   );
